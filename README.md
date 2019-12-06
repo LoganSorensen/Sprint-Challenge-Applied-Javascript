@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+    -The document object mdoel is language independant interface that treats HTML as a tree structure with nodes representing different parts of the document.
+
 2. What is an event?
+
+    -An event is any interaction with the page by the user or browser. Things like clicking on something, pressing a key, copying/pasting text, and even loading the page are all considered events.
 
 3. What is an event listener?
 
+    -An event listener is function that executes code when a specified event occurs.
+
 4. Why would we convert a NodeList into an Array?
 
+    -The primary reason for converting a NodeList to an array is so that array methods can be used on the data.
+
 5. What is a component?
+
+    -A component is a modular, reusable, stand-alone piece of code that can incorporate HTML, CSS, and JavaScript.
 
 ### Git Set up
 
@@ -49,13 +59,13 @@ Edit this document to include your answers after each question. Make sure to lea
 
 Your finished project must include all of the following requirements:
 
-* [ ] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
+* [X] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
 
 * [X] Following the instructions in the `Header/index.js` file, create the Header component. 
 
 * [X] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
 
-* [ ] Following the instructions in the `Cards/index.js` file, create individual Cards components.
+* [X] Following the instructions in the `Cards/index.js` file, create individual Cards components.
 
 ## Stretch Problems
 

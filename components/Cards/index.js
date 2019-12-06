@@ -24,18 +24,44 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
         // console.log(keys);
         // const entries = Object.entries(response.data.articles.bootstrap);
         // console.log(entries);
-        const values = Object.values(response.data.articles);
-        console.log(values);
+        // const values = Object.values(response.data.articles);
+        // console.log(values);
+        // const values = response.data.articles;
+        // console.log(values);
         
-        // response.data.articles.forEach(item => {
-        //     const newCards = cards(item);
-        //     cardsCont.appendChild(newCards);
-        // })
-        const newCards = cards(response.data.articles);
-        cardsCont.appendChild(newCards);
+        response.data.articles.javascript.forEach(item => {
+            const newCards = cards(item);
+            cardsCont.appendChild(newCards);
+        })
+        response.data.articles.bootstrap.forEach(item => {
+            const newCards = cards(item);
+            cardsCont.appendChild(newCards);
+        })
+        response.data.articles.technology.forEach(item => {
+            const newCards = cards(item);
+            cardsCont.appendChild(newCards);
+        })
+        response.data.articles.jquery.forEach(item => {
+            const newCards = cards(item);
+            cardsCont.appendChild(newCards);
+        })
+        response.data.articles.node.forEach(item => {
+            const newCards = cards(item);
+            cardsCont.appendChild(newCards);
+        })
 
-        // const bsIndex = response.data.articles.bootstrap;
-        // console.log(bsIndex[0].headline)
+        // for(let i = 0; i <= 3; i++){
+        // const cardsJS = cards(response.data.articles.javascript[i]);
+        // cardsCont.appendChild(cardsJS);
+        // const cardsBS = cards(response.data.articles.bootstrap[i]);
+        // cardsCont.appendChild(cardsBS);
+        // const cardsTech = cards(response.data.articles.technology[i]);
+        // cardsCont.appendChild(cardsTech);
+        // const cardsJquery = cards(response.data.articles.jquery[i]);
+        // cardsCont.appendChild(cardsJquery);
+        // const cardsNode = cards(response.data.articles.node[i]);
+        // cardsCont.appendChild(cardsNode);
+        // }
     })
     .catch(error => {
         console.log("The data was not returned", error);
@@ -54,12 +80,10 @@ function cards(object) {
     author.classList.add("author");
     imgCont.classList.add("img-container");
 
-    for(let i=0; i < object.bootstrap.length; i++){
-    headline.textContent = object.bootstrap[i].headline;
-    image.src = object.bootstrap[i].authorPhoto;
-    by.textContent = "By " + object.bootstrap[i].authorName;
-    }
-
+    headline.textContent = object.headline;
+    image.src = object.authorPhoto;
+    by.textContent = "By " + object.authorName;
+    
     card.appendChild(headline);
     card.appendChild(author);
     author.appendChild(imgCont);
